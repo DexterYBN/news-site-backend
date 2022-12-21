@@ -53,7 +53,7 @@ module.exports.usersController = {
       );
 
       const users = await User.create({ login, password: hash });
-      res.json(users);
+      res.status(201).json(users);
     } catch (error) {
       res.json({ error: error.message });
     }

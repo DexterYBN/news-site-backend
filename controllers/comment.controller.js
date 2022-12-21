@@ -37,7 +37,7 @@ module.exports.commentsController = {
         text,
         createdAt: new Date(),
       });
-      return res.json(newComment);
+      return res.status(201).json(newComment);
     } catch (error) {
       return res.json({ error: error.message });
     }

@@ -14,6 +14,8 @@ const { PORT, MONGO_SERVER } = process.env;
 
 app.use(require("./routes/users.route"));
 app.use(require("./routes/comments.route"));
+app.use(require("./routes/categories.route"));
+app.use(require("./routes/news.route"));
 
 const startServer = async () => {
   try {
