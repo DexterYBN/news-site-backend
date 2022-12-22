@@ -3,12 +3,14 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const app = express();
 
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, "/assets")));
 
 const { PORT, MONGO_SERVER } = process.env;
 
