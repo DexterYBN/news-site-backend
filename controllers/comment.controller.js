@@ -35,6 +35,7 @@ module.exports.commentsController = {
       const newComment = await Comment.create({
         user: req.user.id,
         text,
+        news: req.body.news,
         createdAt: new Date(),
       });
       return res.status(201).json(newComment);

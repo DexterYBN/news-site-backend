@@ -6,6 +6,10 @@ const commentSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  news: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "News",
+  },
   createdAt: {
     type: Date,
     default: Date.parse,

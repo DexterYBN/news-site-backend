@@ -29,7 +29,7 @@ module.exports.newsController = {
     }
   },
 
-  getNewsByCategory: async (req, res) => {
+  getNewsByCategoryId: async (req, res) => {
     try {
       const news = await News.find({
         category: req.params.categoryId,
