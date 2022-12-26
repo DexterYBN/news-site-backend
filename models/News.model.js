@@ -7,6 +7,7 @@ const newsSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category",
   },
+  image: String,
 });
 
 const News = mongoose.model("News", newsSchema);

@@ -2,9 +2,9 @@ const News = require("../models/News.model");
 
 module.exports.newsController = {
   createNews: async (req, res) => {
-    const { title, subtitle, category } = req.body;
+    const { title, subtitle, category, image } = req.body;
     try {
-      const news = await News.create({ title, subtitle, category });
+      const news = await News.create({ title, subtitle, category, image });
       return res.status(201).json(news);
     } catch (error) {
       return res.json({ error: error.message });
