@@ -34,7 +34,7 @@ module.exports.usersController = {
       };
 
       const token = jwt.sign(payload, process.env.SECRET_JWT_KEY, {
-        expiresIn: "30d",
+        expiresIn: "12h",
       });
 
       res.json({ token, login: payload.login, id: payload._id });
